@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+    <body class="black darken-4">
+
+    <!-- slide navbar -->
+    <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+          <div class="background">
+            <img src="pictures/background.jpg">
+          </div>
+            <a href=""><img class="circle" src="pictures/1x1.jpg"></a>
+            <a href=""><span class="black-text name">Adrian Lunjas</span></a>
+            <a href=""><span class="black-text email">com@gmail.com</span></a>
+          </div>
+        </li>
+        <li>
+            <a href=""><i class="material-icons">accessibility</i>Accounts</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="">Contacts</a></li>
+            <li><a class="waves-effect">Overview</a></li>
+            <li><a class="waves-effect" href="#!">About</a></li>
+    </ul>
+  
+    <!-- NAV BAR -->
+    <div class="navbar-fixed">
+        <nav class="blue blue-grey darken-4">
+          <div class="nav-wrapper container blue-grey darken-4">
+            <a href="#!" class="brand-logo center hide-on-small-only">Telecall CWD</a>
+            <ul class="right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="badges.html">Profile</a></li>
+            </ul>
+            <ul class="left">
+              <li>
+                <a href="#!" data-target="slide-out" class="sidenav-trigger show-on-large">
+                  <i class="material-icons left">menu</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+
+
+    <br>
+    <!-- Picker -->
+    <section class="section grey darken-4">
+        <div class="container">
+            <hr>
+            <h4 class="white-text">Picker</h4>
+            <hr>
+            <h5 class="grey-text">Date Picker</h5>
+            <br>
+            <h5 class="white-text">Date Picker</h5>
+            <div class="form">
+                <div class="input-field">
+                    <input type="text" class="datepicker white-text">
+                    <label for="date">Date</label>
+                </div>
+            <h5 class="white-text">Time Picker</h5>
+                <div class="input-field">
+                    <input type="text" class="timepicker white-text">
+                    <label for="time">time</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- Chips -->
+    <section class="section grey darken-4">
+        <div class="container">
+            <hr>
+            <h4 class="white-text">Chips</h4>
+            <hr>
+            <h5 class="grey-text">Contacts</h5>
+            <div class="chip">
+                <img src="pictures/1x1.jpg" alt="Contact Person">
+                Adrian Lunjas
+            </div>
+            <div class="chip">
+                Tag
+                <i class="close material-icons">close</i>
+            </div>
+            <h5 class="grey-text">JavaScript PlugIn</h5>
+            <br>
+            <h6 class="grey-text">Chips</h6>
+            <div class="chips"></div>
+            <h6 class="grey-text">Chips with Initial</h6>
+            <div class="chips chips-initial"></div>
+            <h6 class="grey-text">Chips with Place holder</h6>
+            <div class="chips chips-placeholder"></div>
+            <h6 class="grey-text">Chips with autocomplete</h6>
+            <div class="chips chips-autocomplete"></div>
+        </div>
+    </section>
+    <br>
+    <!-- Radio Buttons -->
+    <section class="section grey darken-4">
+        <div class="container">
+            <hr>
+            <h4 class="white-text">Radio Buttons</h4>
+            <hr>
+            <br>
+            <form action="#">
+                <h6 class="white-text">What is your favourite fruit?</h6>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" checked />
+                    <span>Banana</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Apple</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                    <span>Mango</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input name="group1" type="radio" />
+                    <span>Avocado</span>
+                  </label>
+                </p>
+              </form>
+        </div>
+    </section>
+    <br>
+
+
+
+
+
+    
+
+    <!-- SCRIPTS -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous">
+    </script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Functions -->
+    <script>
+    $(document).ready(function() {
+        $('.fixed-action-btn').floatingActionButton({
+        hoverEnabled: false,
+        toolbarEnabled: true
+        });
+        $('.sidenav').sidenav({
+        edge: 'left',
+        });
+        $('.materialboxed').materialbox({
+        inDuration: 500
+        });
+        $('.slider').slider({
+        });
+        $('.datepicker').datepicker({
+        format: 'mm/dd/yyyy'
+        });
+        $('.timepicker').timepicker({
+        });
+        $('.chips').chips({
+        });
+        $('.chips-initial').chips({
+        data: [{
+            tag: 'Apple',
+        }, {
+            tag: 'Banana',
+        }, {
+            tag: 'Orange',
+        }],
+        });
+        $('.chips-placeholder').chips({
+        placeholder: 'Enter a fruit',
+        secondaryPlaceholder: '+another fruit',
+        });
+        $('.chips-autocomplete').chips({
+        autocompleteOptions: {
+            data: {
+                'Apple': null,
+                'Microsoft': null,
+                'Google': null
+            },
+            limit: Infinity,
+            minLength: 1
+            }
+        });
+        });
+    </script>
+</body>
+</html>
